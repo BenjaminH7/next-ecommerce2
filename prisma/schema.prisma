@@ -1,0 +1,14 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:E24B334c44a65adE6-c362C6aB33*Cd3@monorail.proxy.rlwy.net:44887/railway"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Todo {
+  id          String  @unique @default(cuid())
+  title       String
+  description String?
+}
